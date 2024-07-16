@@ -7,5 +7,10 @@ end
 # your enumerable module will have access
 # to this method
 class Array
-  # Define my_each here
+  def my_each(&my_block)
+    for element in self
+      my_block.call(element)
+    end
+    self
+  end
 end
